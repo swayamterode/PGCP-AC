@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Vowels or Not!</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h2>Check if char is char or not!</h2>
+    <div class="container">
+      <button onclick="checkVowelOrNot()" type="button">Check char!</button>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function checkVowelOrNot() {
+        let doc = prompt("Please enter a char to check if its vowel or not");
+        const resultText = document.getElementById("result");
+        if (doc != null && doc.length === 1) {
+          if (doc === "a" || doc === "A" || doc === "e" || doc === "E" || doc === "i" || doc === "I" || doc === "o" || doc === "O" || doc == "u" || doc === "U") {
+            resultText.innerHTML = `${doc} is vowel !`;
+            resultText.style.color = "green";
+          } else {
+            resultText.innerHTML = `${doc} is consonant !`;
+            resultText.style.color = "brown";
+          }
+        } else if (doc.length === 0) {
+          resultText.innerHTML = "Please enter char!";
+          resultText.style.color = "red";
+        } else {
+          resultText.innerHTML = "Please enter only one char you have entered more than one char!";
+          resultText.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
