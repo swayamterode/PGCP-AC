@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+        <h1 class="menu-title">Menu</h1>
+        <p class="menu-subtitle">Today's selections</p>
+      </div>
+
+      <!-- Featured card -->
+      <div class="featured-section">
+        <div class="featured-card-wrapper">
+          <div class="menu-card-container">
+            <img id="menu-card" class="image-card" src="./task_1_change_multiple_image_task/assets/samosa.png" alt="samosa" onclick="changeImage()" />
+            <span class="text-card" id="menu-text">Samosa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"><span>More Items</span></div>
+
+      <!-- yeh grid hai -->
+      <div class="menu-grid">
+        <div class="menu-grid-item" onclick="changeImage('kachori')">
+          <img id="menu-card-2" class="image-card" src="./task_1_change_multiple_image_task/assets/kachori.png" alt="kachori" />
+          <span class="text-card">Kachori</span>
+        </div>
+        <div class="menu-grid-item" onclick="changeImage('poha')">
+          <img class="image-card" src="./task_1_change_multiple_image_task/assets/poha.png" alt="poha" />
+          <span class="text-card">Poha</span>
+        </div>
+        <div class="menu-grid-item" onclick="changeImage('idli')">
+          <img class="image-card" src="./task_1_change_multiple_image_task/assets/idli.jpg" alt="idli" />
+          <span class="text-card">Idli</span>
+        </div>
+        <div class="menu-grid-item" onclick="changeImage('upma')">
+          <img class="image-card" src="./task_1_change_multiple_image_task/assets/upma.jpg" alt="upma" />
+          <span class="text-card">Upma</span>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button onclick="resetImage()">Reset Image</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function changeImage(menuItem) {
+      const menuCard = document.getElementById("menu-card");
+      const menuText = document.getElementById("menu-text");
+      if (menuItem === "kachori") {
+        menuCard.src = "./task_1_change_multiple_image_task/assets/kachori.png";
+        menuCard.textContent = "Kachori";
+      } else if (menuItem === "poha") {
+        menuCard.src = "./task_1_change_multiple_image_task/assets/poha.png";
+        menuText.textContent = "Poha";
+      } else if (menuItem === "idli") {
+        menuCard.src = "./task_1_change_multiple_image_task/assets/idli.jpg";
+        menuText.textContent = "Idli";
+      } else if (menuItem === "upma") {
+        menuCard.src = "./task_1_change_multiple_image_task/assets/upma.jpg";
+        menuText.textContent = "Upma";
+      } else {
+        menuCard.src = "./task_1_change_multiple_image_task/assets/samosa.png";
+        menuText.textContent = "Samosa";
+      }
+    }
+
+    function resetImage() {
+      const menuCard = document.getElementById("menu-card");
+      menuCard.src = "./task_1_change_multiple_image_task/assets/samosa.png";
+      const menuText = document.getElementById("menu-text");
+      menuText.textContent = "Samosa";
+    }
+  </script>
+</html>
