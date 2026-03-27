@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="colorBlob" id="glob">
+      <span class="colorBlobText"> Color </span>
+    </div>
+    <div class="btn-group">
+      <button onclick="changeColor('red')">Red</button>
+      <button onclick="changeColor('green')">Green</button>
+      <button onclick="changeColor('blue')">Blue</button>
+      <button onclick="changeColor('yellow')">Yellow</button>
+      <button onclick="changeColor('black')">Black</button>
+    </div>
+  </body>
+  <script>
+    function changeColor(color) {
+      const glob = document.getElementById("glob");
+      glob.style.backgroundColor = color;
+    }
+  </script>
+</html>
