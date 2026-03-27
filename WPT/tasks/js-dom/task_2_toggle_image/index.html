@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Toggle Image</h1>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 24px">
+        <img src="./assets/jethalal-tmkoc.gif" alt="jethalal-googles" id="goggle-image" class="jetha" />
+        <span id="txt" style="font-size: 20px">Me before joining CDAC</span>
+      </div>
+      <br />
+      <div style="display: flex; justify-content: center; margin-top: 24px">
+        <button onClick="changeImage()">Toggle Image</button>
+      </div>
+    </div>
+    <script>
+      function changeImage() {
+        const image = document.getElementById("goggle-image");
+        const text = document.getElementById("txt");
+        if (text.textContent === "Me before joining CDAC") {
+          text.textContent = "Me after joining CDAC";
+        } else {
+          text.textContent = "Me before joining CDAC";
+        }
+        if (image.src.includes("jethalal-tmkoc.gif")) {
+          image.src = "./assets/denial-heart.gif";
+        } else {
+          image.src = "./assets/jethalal-tmkoc.gif";
+        }
+      }
+    </script>
+  </body>
+</html>
