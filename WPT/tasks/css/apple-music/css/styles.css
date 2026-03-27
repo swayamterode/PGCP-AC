@@ -1,0 +1,443 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #fc3c44;
+  --red-dark: #d4001f;
+  --red-glow: rgba(252, 60, 68, 0.35);
+  --bg: #000;
+  --surface: #1c1c1e;
+  --surface2: #2c2c2e;
+  --text: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.55);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── HEADER ─── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.apple-music-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* Apple Music icon via CSS */
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(145deg, #fc5c7d, #fc3c44, #9b0000);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(252, 60, 68, 0.5);
+  flex-shrink: 0;
+}
+
+/* Music note via CSS */
+.logo-icon::before {
+  content: "♪";
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #fff;
+}
+
+.logo-text span {
+  color: var(--red);
+}
+
+/* nav pills */
+.nav-pills {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.nav-pill {
+  background: var(--surface);
+  border: none;
+  color: var(--text-secondary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.nav-pill:hover {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.nav-pill.active {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ─── HERO BANNER ─── */
+.hero {
+  padding: 48px 32px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(252, 60, 68, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+/* ─── GRID ─── */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 32px 32px;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* stagger via nth-child */
+.music-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.music-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.music-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.music-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.music-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.music-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.music-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.music-card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.music-card:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.music-card:nth-child(10) {
+  animation-delay: 0.5s;
+}
+.music-card:nth-child(11) {
+  animation-delay: 0.55s;
+}
+.music-card:nth-child(12) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+}
+
+.music-card:hover .card-art {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.7),
+    0 6px 16px rgba(252, 60, 68, 0.2);
+}
+
+.card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.music-card:hover .card-art img {
+  transform: scale(1.06);
+}
+
+/* play button overlay */
+.card-art::after {
+  content: "▶";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.music-card:hover .card-art::after {
+  opacity: 1;
+}
+
+/* placeholder gradient when no image */
+.card-art.placeholder {
+  background: linear-gradient(135deg, var(--surface2), var(--surface));
+}
+
+.card-meta {
+  padding: 0 2px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.1px;
+}
+
+.card-artist {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--red);
+}
+
+/* ─── MINI PLAYER ka css hai yeh ─── */
+.mini-player {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(480px, calc(100vw - 48px));
+  background: rgba(30, 30, 32, 0.88);
+  backdrop-filter: saturate(200%) blur(28px);
+  -webkit-backdrop-filter: saturate(200%) blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.8),
+    0 0 0 0.5px rgba(255, 255, 255, 0.05);
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.player-thumb {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fc5c7d, #9b0000);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(252, 60, 68, 0.4);
+}
+
+.player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-track {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-artist {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctrl-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    transform 0.15s;
+  padding: 4px;
+  line-height: 1;
+}
+
+.ctrl-btn:hover {
+  color: var(--text);
+  transform: scale(1.15);
+}
+
+.ctrl-btn.play {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 4px 14px var(--red-glow);
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+}
+
+.ctrl-btn.play:hover {
+  background: #ff4d54;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(252, 60, 68, 0.55);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
