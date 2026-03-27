@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email</title>
+</head>
+<body>
+  <p id="output"></p>
+
+  <script>
+    function checkEmail() {
+      let doc = prompt("Enter your email Id:", "swayam@gmail.com");
+
+      if (!doc) {
+        document.getElementById("output").innerText = "No input provided!";
+        return;
+      }
+
+      let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (!regex.test(doc)) {
+        document.getElementById("output").innerText = "Please enter valid email!";
+        return;
+      }
+
+      if (doc.includes("@gmail.com")) {
+        document.getElementById("output").innerText = `Email ${doc}: domain is Gmail`;
+      } else if (doc.includes("@yahoo.com")) {
+        document.getElementById("output").innerText = `Email ${doc}: domain is Yahoo`;
+      } else if (doc.includes("@outlook.com")) {
+        document.getElementById("output").innerText = `Email ${doc}: domain is Outlook`;
+      } else {
+        document.getElementById("output").innerText = `Email ${doc} is not a recognized domain!`;
+      }
+    }
+
+    checkEmail();
+  </script>
+</body>
+</html>
