@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odd or Even</title>
+  </head>
+  <body>
+    <h1>Check if number is odd or even!</h1>
+    <button onclick="CheckNumber()">Click me</button>
+    <div id="result"></div>
+  </body>
+  <script>
+    function CheckNumber() {
+      const resultText = document.getElementById("result");
+      let doc = prompt("Enter a number");
+
+      if (!/^[0-9]+$/.test(doc)) {
+        resultText.innerText = "Please enter number";
+      } else if (doc % 2 == 0) {
+        resultText.innerText = `${doc} is even`;
+      } else {
+        resultText.innerText = `${doc} is odd`;
+      }
+    }
+  </script>
+</html>
