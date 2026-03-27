@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.address-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 20px;
+}
+.input-class {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+button {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.input-styles {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
