@@ -1,0 +1,48 @@
+:root {
+  --bg: #fdf6ee;
+  --surface: #fff8f0;
+  --border: #e8d5bb;
+  --accent: #b85c2a;
+  --accent-light: #f2e0cf;
+  --text-primary: #2c1a0e;
+  --text-secondary: #7a5c42;
+  --shadow: 0 4px 20px rgba(90, 40, 10, 0.1);
+  --shadow-hover: 0 10px 32px rgba(90, 40, 10, 0.18);
+  --radius: 24px;
+}
+body {
+  background-color: var(--bg);
+  font-family: "DM Sans", sans-serif;
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 24px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 330px;
+  margin: 20px auto;
+}
+.input-container {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 2px;
+}
+.btn-group {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
