@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permanent Address</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Permanent Address</h1>
+      <p>This is where the permanent address information will be displayed.</p>
+    </div>
+
+    <div class="address-container">
+      <div class="input-class">
+        <label for="tempAddress">Enter Temporary Address</label>
+        <input type="text" class="input-styles" id="tempAddress" placeholder="Enter temporary address" />
+      </div>
+      <button id="copyButton" class="input-styles">Same as</button>
+      <div class="input-class">
+        <label for="permAddress">Permanent Address</label>
+        <input type="text" id="permAddress" class="input-styles" placeholder="Permanent address will appear here" readonly />
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
