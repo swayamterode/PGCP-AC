@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Form Validation</title>
+  </head>
+
+  <body>
+    <h2>Form Validation</h2>
+
+    <form onsubmit="return validateForm();">
+      Email:
+      <input type="text" id="email" onblur="validateEmail()" />
+      <span id="emailError" style="color: red"></span>
+      <br /><br />
+
+      Password:
+      <input type="password" id="password" onblur="validatePassword()" />
+      <span id="passError" style="color: red"></span>
+      <br /><br />
+
+      Contact:
+      <input type="text" id="contact" onblur="validateContact()" />
+      <span id="contactError" style="color: red"></span>
+      <br /><br />
+
+      Gender:
+      <input type="radio" id="male" name="gender" /> Male <input type="radio" id="female" name="gender" /> Female
+      <span id="genderError" style="color: red"></span>
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    function validateEmail() {
+      let email = document.getElementById("email").value;
+      let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!email.match(pattern)) {
+        document.getElementById("emailError").innerHTML = "Invalid email format";
+        return false;
+      } else {
+        document.getElementById("emailError").innerHTML = "";
+        return true;
+      }
+    }
+
+    function validatePassword() {
+      let password = document.getElementById("password").value;
+
+      if (password.length < 6) {
+        document.getElementById("passError").innerHTML = "Password must be at least 6 characters";
+        return false;
+      } else {
+        document.getElementById("passError").innerHTML = "";
+        return true;
+      }
+    }
+
+    function validateContact() {
+      let contact = document.getElementById("contact").value;
+      let pattern = /^[0-9]{10}$/;
+
+      if (!contact.match(pattern)) {
+        document.getElementById("contactError").innerHTML = "Enter valid 10-digit number";
+        return false;
+      } else {
+        document.getElementById("contactError").innerHTML = "";
+        return true;
+      }
+    }
+
+    function validateGender() {
+      let male = document.getElementById("male").checked;
+      let female = document.getElementById("female").checked;
+
+      if (!male && !female) {
+        document.getElementById("genderError").innerHTML = "Please select gender";
+        return false;
+      } else {
+        document.getElementById("genderError").innerHTML = "";
+        return true;
+      }
+    }
+
+    function validateForm() {
+      return validateEmail() && validatePassword() && validateContact() && validateGender();
+    }
+  </script>
+</html>
