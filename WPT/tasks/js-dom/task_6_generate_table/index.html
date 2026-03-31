@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Table</title>
+    <style>
+      .container {
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" onclick="generateTable()">Generate button</button>
+      <table border="" width="50%">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Post</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+  </body>
+  <script>
+    let emp = [
+      { id: 1, name: "Abhishek", post: "Manager", salary: "950000" },
+      { id: 2, name: "Payal", post: "HR", salary: "950000" },
+      { id: 3, name: "Swayam", post: "TL", salary: "950000" },
+      { id: 4, name: "Swati", post: "Fullstack Developer", salary: "950000" },
+      { id: 5, name: "Tanmay", post: "React Developer", salary: "950000" },
+    ];
+
+    let isGenerated = false;
+
+    const generateTable = () => {
+      if (isGenerated) return;
+
+      const tbody = document.getElementById("tb");
+
+      for (let i = 0; i < emp.length; i++) {
+        let newRow = document.createElement("tr");
+        newRow.innerHTML = `
+        <td>${emp[i].id}</td>
+        <td>${emp[i].name}</td>
+        <td>${emp[i].post}</td>
+        <td>${emp[i].salary}</td>
+      `;
+        tbody.appendChild(newRow);
+      }
+
+      isGenerated = true;
+    };
+  </script>
+</html>
