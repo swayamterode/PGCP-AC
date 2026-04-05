@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Theme</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+        height: 100vh;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <button id="theme" onclick="handleThemeToggle()">Dark Theme</button>
+
+    <script>
+      function handleThemeToggle() {
+        let btn = document.getElementById("theme");
+        let body = document.getElementById("body");
+
+        if (btn.innerHTML === "Dark Theme") {
+          body.style.backgroundColor = "black";
+          body.style.color = "white";
+          btn.innerHTML = "Light Theme";
+        } else {
+          body.style.backgroundColor = "whitesmoke";
+          body.style.color = "black";
+          btn.innerHTML = "Dark Theme";
+        }
+      }
+    </script>
+  </body>
+</html>
