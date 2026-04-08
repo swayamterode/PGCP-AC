@@ -1,28 +1,370 @@
-# Java Session 02 — Object-Oriented Programming
+# Java Session 02 — Practice Programs + Object-Oriented Programming
 
-This session moves from procedural code to **Object-Oriented Programming (OOP)**. Programs are arranged from the simplest concept (getters/setters) up to the most advanced (constructor chaining and variable-argument overloading).
+This session is split into two parts:
+- **Part A — Practice Programs:** Core logic exercises (arithmetic, loops, number problems) arranged from simplest to most complex.
+- **Part B — OOP Programs:** Object-Oriented Programming concepts from getters/setters up to constructor chaining and variable-argument overloading.
 
 ---
 
 ## Table of Contents
 
+### Part A — Practice Programs
+
 | # | File | Core Concept | Level |
 |---|------|-------------|-------|
-| 1 | [AccessorAndMutator](#1-accessorandmutatorjava) | Getters and Setters | Beginner |
-| 2 | [MyDate](#2-mydatejava) | Class with validation | Beginner |
-| 3 | [ConstructorDemo](#3-constructordemojava) | Default vs Parameterized Constructor | Beginner |
-| 4 | [MyDateUserInput](#4-mydateuserinputjava) | User input + improved validation | Beginner |
-| 5 | [CalculateArea](#5-calculateareajava) | Multi-method class (init / compute / display) | Intermediate |
-| 6 | [MathOperation](#6-mathoperationjava) | Class-based math with `init` pattern | Intermediate |
-| 7 | [MethodOverloading](#7-methodoverloadingjava) | Overloaded methods by parameter type | Intermediate |
-| 8 | [MathOperation2](#8-mathoperation2java) | Multiple overloads on one method | Intermediate |
-| 9 | [ConstructorChaining](#9-constructorchainingjava) | `this()` — calling one constructor from another | Advanced |
-| 10 | [Person](#10-personjava) | Constructor chaining with default values | Advanced |
-| 11 | [MethodOverloadingUsingVarArgs](#11-methodoverloadingusingvarargsjava) | Variable-argument methods (`int...`) | Advanced |
+| 1 | [SwapNumbers](#1-swapnumbersjava) | Swap two variables using a third | Beginner |
+| 2 | [SumAndPercentage](#2-sumandpercentagejava) | Sum of 5 subjects + percentage | Beginner |
+| 3 | [LeapYear](#3-leapyearjava) | Leap year check using divisibility rules | Beginner |
+| 4 | [MultiplicationTables](#4-multiplicationtablesjava) | Tables from 2 to 5 using nested loops | Beginner |
+| 5 | [FibonacciSeries](#5-fibonacciseriesjava) | N-term Fibonacci sequence | Intermediate |
+| 6 | [ReverseNumber](#6-reversenumberjava) | Reverse digits of an integer | Intermediate |
+| 7 | [PrimeNumbers](#7-primenumbersjava) | Print all primes between 1 and 50 | Intermediate |
+| 8 | [PalindromeNumber](#8-palindromenumberjava) | Check if a number reads the same forwards and backwards | Intermediate |
+| 9 | [ArmstrongNumber](#9-armstrongnumberjava) | Check Armstrong number using digit-power sum | Advanced |
+
+### Part B — OOP Programs
+
+| # | File | Core Concept | Level |
+|---|------|-------------|-------|
+| 10 | [AccessorAndMutator](#10-accessorandmutatorjava) | Getters and Setters | Beginner |
+| 11 | [MyDate](#11-mydatejava) | Class with validation | Beginner |
+| 12 | [ConstructorDemo](#12-constructordemojava) | Default vs Parameterized Constructor | Beginner |
+| 13 | [MyDateUserInput](#13-mydateuserinputjava) | User input + improved validation | Beginner |
+| 14 | [CalculateArea](#14-calculateareajava) | Multi-method class (init / compute / display) | Intermediate |
+| 15 | [MathOperation](#15-mathoperationjava) | Class-based math with `init` pattern | Intermediate |
+| 16 | [MethodOverloading](#16-methodoverloadingjava) | Overloaded methods by parameter type | Intermediate |
+| 17 | [MathOperation2](#17-mathoperation2java) | Multiple overloads on one method | Intermediate |
+| 18 | [ConstructorChaining](#18-constructorchainingjava) | `this()` — calling one constructor from another | Advanced |
+| 19 | [Person](#19-personjava) | Constructor chaining with default values | Advanced |
+| 20 | [MethodOverloadingUsingVarArgs](#20-methodoverloadingusingvarargsjava) | Variable-argument methods (`int...`) | Advanced |
 
 ---
 
-## 1. `AccessorAndMutator.java`
+## Part A — Practice Programs
+
+---
+
+## 1. `SwapNumbers.java`
+
+**Level:** Beginner — _Start here._
+
+### What it teaches
+How to swap two variables using a temporary third variable — one of the most fundamental programming patterns.
+
+### How it works
+```
+temp = a   →   a = b   →   b = temp
+```
+Direct assignment `a = b` would overwrite `a` before saving its value. The `temp` variable holds `a`'s original value so it can be assigned to `b` safely.
+
+### Code
+```java
+int temp = a;
+a = b;
+b = temp;
+```
+
+### Sample Output
+```
+Enter first number  : 10
+Enter second number : 20
+
+Before Swap: a = 10, b = 20
+After Swap : a = 20, b = 10
+```
+
+> **Note:** Swapping can also be done without a third variable using arithmetic (`a = a + b; b = a - b; a = a - b`) or XOR, but the third-variable method is the clearest and safest.
+
+---
+
+## 2. `SumAndPercentage.java`
+
+**Level:** Beginner
+
+### What it teaches
+Using an array to collect multiple inputs in a loop, then computing sum and percentage — a classic accumulator pattern.
+
+### How it works
+```java
+int[] marks = new int[5];
+for (int i = 0; i < 5; i++) marks[i] = sc.nextInt();
+
+int sum = 0;
+for (int mark : marks) sum += mark;          // enhanced for-each loop
+
+double percentage = (sum / 500.0) * 100;     // 500.0 forces floating-point division
+```
+
+> **Why `500.0` and not `500`?** Integer division (`sum / 500`) truncates the decimal. Using `500.0` promotes the result to `double`, preserving the fractional part.
+
+### Sample Output
+```
+Enter marks for 5 subjects:
+Subject 1: 85
+Subject 2: 90
+Subject 3: 78
+Subject 4: 92
+Subject 5: 88
+
+Total Marks : 433 / 500
+Percentage  : 86.6%
+```
+
+---
+
+## 3. `LeapYear.java`
+
+**Level:** Beginner
+
+### What it teaches
+Multi-condition boolean logic — a real-world example where a single `if` is not enough and the conditions must be combined with `&&` and `||`.
+
+### The Leap Year Rule
+A year is a leap year if:
+1. Divisible by 4 **AND** not divisible by 100 — e.g. 2024
+2. **OR** divisible by 400 — e.g. 2000
+
+```java
+boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+```
+
+### Why the rule has two parts
+| Year | Div by 4 | Div by 100 | Div by 400 | Leap? |
+|------|----------|------------|------------|-------|
+| 2024 | Yes | No | No | **Yes** |
+| 1900 | Yes | Yes | No | **No** |
+| 2000 | Yes | Yes | Yes | **Yes** |
+
+### Sample Output
+```
+Enter a year: 2024
+2024 is a Leap Year.
+
+Enter a year: 1900
+1900 is NOT a Leap Year.
+```
+
+---
+
+## 4. `MultiplicationTables.java`
+
+**Level:** Beginner
+
+### What it teaches
+Nested loops — an outer loop controls which table is printed, and an inner loop generates each row.
+
+### Code
+```java
+for (int table = 2; table <= 5; table++) {
+    for (int i = 1; i <= 10; i++) {
+        System.out.println(table + " x " + i + " = " + (table * i));
+    }
+}
+```
+
+### Sample Output
+```
+--- Table of 2 ---
+2 x 1 = 2
+2 x 2 = 4
+...
+--- Table of 3 ---
+3 x 1 = 3
+...
+```
+
+> **No user input needed** — the range (2 to 5) is hardcoded, making this the simplest loop program in the set.
+
+---
+
+## 5. `FibonacciSeries.java`
+
+**Level:** Intermediate
+
+### What it teaches
+Sequence generation using two variables that "leapfrog" forward — a classic algorithm that appears in nature, mathematics, and dynamic programming.
+
+### How it works
+```java
+int a = 0, b = 1;
+for (int i = 1; i <= n; i++) {
+    System.out.print(a + " ");
+    int next = a + b;   // compute next term
+    a = b;              // shift: a moves to b's position
+    b = next;           // shift: b moves to next position
+}
+```
+
+**Step-by-step (n = 6):**
+
+| Step | `a` | `b` | Printed |
+|------|-----|-----|---------|
+| 1 | 0 | 1 | 0 |
+| 2 | 1 | 1 | 1 |
+| 3 | 1 | 2 | 1 |
+| 4 | 2 | 3 | 2 |
+| 5 | 3 | 5 | 3 |
+| 6 | 5 | 8 | 5 |
+
+### Sample Output
+```
+How many terms? 8
+Fibonacci Series: 0 1 1 2 3 5 8 13
+```
+
+---
+
+## 6. `ReverseNumber.java`
+
+**Level:** Intermediate
+
+### What it teaches
+Digit extraction using modulo and integer division — the foundation of many number-manipulation algorithms (palindrome, Armstrong, digit sum).
+
+### How it works
+```java
+while (num != 0) {
+    int digit  = num % 10;          // extract last digit
+    reversed   = reversed * 10 + digit;  // append to reversed
+    num       /= 10;                // remove last digit
+}
+```
+
+**Step-by-step (num = 1234):**
+
+| `num` | `digit` | `reversed` |
+|-------|---------|------------|
+| 1234 | 4 | 4 |
+| 123 | 3 | 43 |
+| 12 | 2 | 432 |
+| 1 | 1 | 4321 |
+
+### Sample Output
+```
+Enter a number: 1234
+Original  : 1234
+Reversed  : 4321
+```
+
+---
+
+## 7. `PrimeNumbers.java`
+
+**Level:** Intermediate
+
+### What it teaches
+Nested loops with early exit (`break`) and an optimized divisibility check using `Math.sqrt()` — an important efficiency concept.
+
+### How it works
+```java
+for (int num = 2; num <= 50; num++) {
+    boolean isPrime = true;
+    for (int i = 2; i <= Math.sqrt(num); i++) {  // only check up to sqrt
+        if (num % i == 0) { isPrime = false; break; }
+    }
+    if (isPrime) System.out.print(num + " ");
+}
+```
+
+> **Why `Math.sqrt(num)`?** If `num` has a factor larger than its square root, it must also have one smaller — so checking beyond `sqrt` is redundant. This reduces iterations significantly for large numbers.
+
+### Sample Output
+```
+Prime numbers between 1 and 50:
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
+```
+
+---
+
+## 8. `PalindromeNumber.java`
+
+**Level:** Intermediate
+
+### What it teaches
+Reuses the digit-reversal logic from `ReverseNumber` to solve a different problem — checking symmetry. Shows how one algorithm (reverse) enables another (palindrome check).
+
+### How it works
+```java
+int original = num;
+int reversed = 0;
+while (num != 0) {
+    reversed = reversed * 10 + (num % 10);
+    num /= 10;
+}
+if (original == reversed) // palindrome
+```
+
+**Palindrome examples:**
+
+| Number | Reversed | Palindrome? |
+|--------|----------|-------------|
+| 121 | 121 | Yes |
+| 1331 | 1331 | Yes |
+| 123 | 321 | No |
+
+### Sample Output
+```
+Enter a number: 121
+121 is a Palindrome.
+
+Enter a number: 123
+123 is NOT a Palindrome.
+```
+
+---
+
+## 9. `ArmstrongNumber.java`
+
+**Level:** Advanced
+
+### What it teaches
+Combines digit extraction, `Math.pow()`, and `String.valueOf()` for digit counting — the most algorithmically complex program in Part A.
+
+### What is an Armstrong Number?
+A number where the **sum of each digit raised to the power of the total number of digits** equals the original number.
+
+```
+153 → digits: 3 → 1³ + 5³ + 3³ = 1 + 125 + 27 = 153 ✓
+9474 → digits: 4 → 9⁴ + 4⁴ + 7⁴ + 4⁴ = 6561 + 256 + 2401 + 256 = 9474 ✓
+```
+
+### Code
+```java
+int digits = String.valueOf(num).length();  // count digits
+int sum = 0;
+while (num != 0) {
+    int digit = num % 10;
+    sum += (int) Math.pow(digit, digits);   // digit ^ total_digits
+    num /= 10;
+}
+if (sum == original) // Armstrong
+```
+
+**Step-by-step (num = 153):**
+
+| Digit | Power | Result |
+|-------|-------|--------|
+| 3 | 3 | 27 |
+| 5 | 3 | 125 |
+| 1 | 3 | 1 |
+| **Sum** | | **153** |
+
+### Sample Output
+```
+Enter a number: 153
+153 is an Armstrong number.
+
+Enter a number: 100
+100 is NOT an Armstrong number.
+```
+
+---
+
+## Part B — OOP Programs
+
+---
+
+## 10. `AccessorAndMutator.java`
 
 **Level:** Beginner — _Start here._
 
@@ -70,7 +412,7 @@ System.out.println(day + "/" + month + "/" + year); // 1/12/2026
 
 ---
 
-## 2. `MyDate.java`
+## 11. `MyDate.java`
 
 **Level:** Beginner
 
@@ -119,7 +461,7 @@ d.display();                // Date=[1/12/2026]
 
 ---
 
-## 3. `ConstructorDemo.java`
+## 12. `ConstructorDemo.java`
 
 **Level:** Beginner
 
@@ -181,7 +523,7 @@ Employee Details:
 
 ---
 
-## 4. `MyDateUserInput.java`
+## 13. `MyDateUserInput.java`
 
 **Level:** Beginner
 
@@ -221,7 +563,7 @@ Date=[15/8/2025]
 
 ---
 
-## 5. `CalculateArea.java`
+## 14. `CalculateArea.java`
 
 **Level:** Intermediate
 
@@ -257,7 +599,7 @@ obj.display();           // step 3 — output → Area: 78.5mm^2
 
 ---
 
-## 6. `MathOperation.java`
+## 15. `MathOperation.java`
 
 **Level:** Intermediate
 
@@ -299,7 +641,7 @@ obj.display();  // Result: 81.0
 
 ---
 
-## 7. `MethodOverloading.java`
+## 16. `MethodOverloading.java`
 
 **Level:** Intermediate
 
@@ -338,7 +680,7 @@ Method overloading is resolved **at compile time** — no runtime cost.
 
 ---
 
-## 8. `MathOperation2.java`
+## 17. `MathOperation2.java`
 
 **Level:** Intermediate
 
@@ -370,7 +712,7 @@ obj.multiply(3.145, 2);            // double + int → 6.29
 
 ---
 
-## 9. `ConstructorChaining.java`
+## 18. `ConstructorChaining.java`
 
 **Level:** Advanced
 
@@ -420,7 +762,7 @@ Player Name: Rohit Sharma, Country: India
 
 ---
 
-## 10. `Person.java`
+## 19. `Person.java`
 
 **Level:** Advanced
 
@@ -468,7 +810,7 @@ System.out.println(obj);  // Name: null, age: 18
 
 ---
 
-## 11. `MethodOverloadingUsingVarArgs.java`
+## 20. `MethodOverloadingUsingVarArgs.java`
 
 **Level:** Advanced
 
@@ -518,10 +860,27 @@ double result2 = obj.add(1.232, 123.422, 23.232, 232.234, 123.00);              
 
 ## Concepts Covered
 
+### Part A — Practice Programs
+
+| Concept | Programs |
+|---------|----------|
+| Variable swap with temp | `SwapNumbers` |
+| Array + accumulator pattern | `SumAndPercentage` |
+| Multi-condition boolean logic | `LeapYear` |
+| Nested loops | `MultiplicationTables`, `PrimeNumbers` |
+| Sequence generation | `FibonacciSeries` |
+| Digit extraction (`% 10`, `/ 10`) | `ReverseNumber`, `PalindromeNumber`, `ArmstrongNumber` |
+| `Math.sqrt()` optimization | `PrimeNumbers` |
+| `Math.pow()` | `ArmstrongNumber` |
+| `String.valueOf()` for digit count | `ArmstrongNumber` |
+| `break` for early exit | `PrimeNumbers` |
+
+### Part B — OOP Programs
+
 | Concept | Programs |
 |---------|----------|
 | Getters and setters | `AccessorAndMutator`, `MyDate`, `MyDateUserInput` |
-| `private` fields | All programs |
+| `private` fields | All OOP programs |
 | Object lifecycle (`new`, methods, display) | `MyDate`, `CalculateArea`, `MathOperation` |
 | Default constructor | `ConstructorDemo`, `Person` |
 | Parameterized constructor | `ConstructorDemo`, `ConstructorChaining`, `Person` |
