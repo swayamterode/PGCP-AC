@@ -1,4 +1,40 @@
-# LearningStatic — Static Concepts
+# Session 03 — Arrays, Static & OOP Assignments
+
+**Path:** `session_03/src/`
+
+> Covers static keyword, arrays (1D, 2D, jagged), and OOP-based assignment programs.
+
+---
+
+## Root-Level Programs
+
+| #   | File                                                       | Description                                           | Level        |
+| --- | ---------------------------------------------------------- | ----------------------------------------------------- | ------------ |
+| 1   | [LearningStatic.java](LearningStatic.java)                 | Static variable, static block, and static method demo | Intermediate |
+| 2   | [JaggedArray.java](JaggedArray.java)                       | Jagged (irregular) 2D array creation and traversal    | Intermediate |
+| 3   | [AverageMarksOfStudents.java](AverageMarksOfStudents.java) | Array of student marks with average calculation       | Elementary   |
+| 4   | [SwapDates.java](SwapDates.java)                           | Swapping date values using object references          | Intermediate |
+
+---
+
+## Assignments Package (`assignments/`)
+
+| #   | File                                                               | Description                                                                                      | Level        |
+| --- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------ |
+| 1   | [SumAndAverage.java](assignments/SumAndAverage.java)               | Sum and average of array elements, user input                                                    | Beginner     |
+| 2   | [SortArrayInDesc.java](assignments/SortArrayInDesc.java)           | Sort array in descending order                                                                   | Elementary   |
+| 3   | [GrossSalary.java](assignments/GrossSalary.java)                   | Calculate gross salary using OOP                                                                 | Elementary   |
+| 4   | [ArrayDemo.java](assignments/ArrayDemo.java)                       | Jagged array of 17 elements in 5 rows; user input; sum                                           | Intermediate |
+| 5   | [MatrixMultiplication.java](assignments/MatrixMultiplication.java) | 3×3 matrix multiplication with user input                                                        | Intermediate |
+| 6   | [MatrixTranspose.java](assignments/MatrixTranspose.java)           | Transpose of any m×n matrix; user provides size and elements                                     | Intermediate |
+| 7   | [Employee.java](assignments/Employee.java)                         | Employee class — auto-increment `empNo`, static `totalSalary`, class-level `displayStats()`      | Intermediate |
+| 8   | [EmployeeDemo.java](assignments/EmployeeDemo.java)                 | Driver for Employee — user enters n salaries, stats displayed                                    | Intermediate |
+| 9   | [Product.java](assignments/Product.java)                           | Product class with `pid`, `price`, `quantity` and parameterized constructor                      | Elementary   |
+| 10  | [XYZ.java](assignments/XYZ.java)                                   | Accepts 5 products from user; finds PID of highest-priced product; calculates total amount spent | Advanced     |
+
+---
+
+## LearningStatic — Static Concepts
 
 ## Static Variable
 
