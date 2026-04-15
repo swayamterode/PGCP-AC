@@ -13,6 +13,15 @@ A collection of Java programs organized by session, covering core Java fundament
   - [Session 03 — Arrays, Static \& OOP Assignments](#session-03--arrays-static--oop-assignments)
     - [Root-Level Programs](#root-level-programs)
     - [Assignments](#assignments)
+  - [Session 06 — File Handling, Exception Handling \& Date Formatting](#session-06--file-handling-exception-handling--date-formatting)
+    - [Exception Handling](#exception-handling)
+    - [Assertion](#assertion)
+    - [Date Formatting \& Parsing](#date-formatting--parsing)
+    - [File Handling](#file-handling)
+  - [Session 07 — Inner Classes, Lambda Expressions \& String Methods](#session-07--inner-classes-lambda-expressions--string-methods)
+    - [Inner Classes](#inner-classes)
+    - [Lambda Expressions](#lambda-expressions)
+    - [String Methods](#string-methods)
 
 ---
 
@@ -87,3 +96,74 @@ A collection of Java programs organized by session, covering core Java fundament
 | 8   | [EmployeeDemo.java](session_03/src/assignments/EmployeeDemo.java)                 | Driver for Employee — user enters n salaries, stats displayed                                    | Intermediate |
 | 9   | [Product.java](session_03/src/assignments/Product.java)                           | Product class with `pid`, `price`, `quantity` and parameterized constructor                      | Elementary   |
 | 10  | [XYZ.java](session_03/src/assignments/XYZ.java)                                   | Accepts 5 products from user; finds PID of highest-priced product; calculates total amount spent | Advanced     |
+
+---
+
+## Session 06 — File Handling, Exception Handling & Date Formatting
+
+**Path:** `session_06/src/`
+
+> Covers runtime exceptions, assertions, `SimpleDateFormat`, and byte-level file I/O using streams.
+
+### Exception Handling
+
+| #   | File                                                                                          | Description                                                               | Level        |
+| --- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------ |
+| 1   | [NullPointerExceptionCode.java](session_06/src/session_06/NullPointerExceptionCode.java)     | Demo of `NullPointerException` caught with `try-catch`                    | Beginner     |
+| 2   | [IllegalArgumentExample.java](session_06/src/session_06/IllegalArgumentExample.java)         | Field validation throwing `IllegalArgumentException` with custom messages | Elementary   |
+
+### Assertion
+
+| #   | File                                                                                | Description                                                   | Level      |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------- |
+| 1   | [AssertDemo.java](session_06/src/classroom/assertion/AssertDemo.java)               | Using the `assert` keyword for runtime pre-condition checking | Elementary |
+
+### Date Formatting & Parsing
+
+| #   | File                                                                                              | Description                                                          | Level        |
+| --- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------ |
+| 1   | [DateFormatAndParsing.java](session_06/src/classroom/dateformat/DateFormatAndParsing.java)       | Formatting and parsing dates with multiple `SimpleDateFormat` patterns | Intermediate |
+
+### File Handling
+
+| #   | File                                                                                                        | Description                                                             | Level        |
+| --- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------ |
+| 1   | [CountNoOfA.java](session_06/src/classroom/filehandling/CountNoOfA.java)                                   | Count occurrences of `'a'`/`'A'` in a file using `FileInputStream`     | Elementary   |
+| 2   | [CountNumberOfWords.java](session_06/src/classroom/filehandling/CountNumberOfWords.java)                   | Word count by counting spaces (first-attempt approach, noted incorrect) | Elementary   |
+| 3   | [WordCount.java](session_06/src/classroom/filehandling/WordCount.java)                                     | Accurate word count using `Scanner` over a `File` object               | Intermediate |
+| 4   | [ReadAndWriteFromFileStream.java](session_06/src/classroom/filehandling/ReadAndWriteFromFileStream.java)   | Read from a source file and append-write to a destination file          | Intermediate |
+
+---
+
+## Session 07 — Inner Classes, Lambda Expressions & String Methods
+
+**Path:** `session_07/src/`
+
+> Covers all four inner-class types, functional interfaces, lambda expressions, and common `String` API methods.
+
+### Inner Classes
+
+| #   | File                                                                                                        | Description                                                                          | Level        |
+| --- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------ |
+| 1   | [InterfaceArithmaticCal.java](session_07/src/session_07/InterfaceArithmaticCal.java)                       | Functional interface with a single `add` method                                      | Beginner     |
+| 2   | [MemberInnerClassDemo.java](session_07/src/session_07/MemberInnerClassDemo.java)                           | Member inner class accessing private fields of the outer class                       | Elementary   |
+| 3   | [MemberLocalInnerClassDemo.java](session_07/src/session_07/MemberLocalInnerClassDemo.java)                 | Method-local inner class defined and used inside a method body                       | Intermediate |
+| 4   | [StaticInnerClassDemo.java](session_07/src/session_07/StaticInnerClassDemo.java)                           | Static nested class — access limited to `static` outer members                       | Intermediate |
+| 5   | [AnonymousInnerClassDemo.java](session_07/src/session_07/AnonymousInnerClassDemo.java)                     | Anonymous inner class providing an on-the-fly implementation of an interface         | Intermediate |
+| 6   | [PracticeMethodLocalInnerClass.java](session_07/src/session_07/PracticeMethodLocalInnerClass.java)         | Practice task — accessing all variables across outer class, inner class, and method  | Advanced     |
+
+### Lambda Expressions
+
+| #   | File                                                                                                          | Description                                                                  | Level        |
+| --- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------ |
+| 1   | [HelloWorldInterface.java](session_07/src/session_07/lambda/HelloWorldInterface.java)                         | `@FunctionalInterface` with a `default` method and a `static` helper         | Beginner     |
+| 2   | [HelloWorldTraditional.java](session_07/src/session_07/lambda/HelloWorldTraditional.java)                     | Traditional class implementing a functional interface                         | Beginner     |
+| 3   | [HelloWorldLambda.java](session_07/src/session_07/lambda/HelloWorldLambda.java)                               | Lambda expression replacing the traditional class implementation              | Elementary   |
+| 4   | [IncrementByTenInterface.java](session_07/src/session_07/lambda/IncrementByTenInterface.java)                 | `@FunctionalInterface` for an integer increment operation                     | Elementary   |
+| 5   | [IncerementByTenClass.java](session_07/src/session_07/lambda/IncerementByTenClass.java)                       | Lambda with a block body for increment-by-10 using user input                 | Intermediate |
+
+### String Methods
+
+| #   | File                                                                              | Description                                                                            | Level        |
+| --- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------ |
+| 1   | [StringMethods.java](session_07/src/session_07/StringMethods.java)               | Common `String` API — `trim`, `equals`, `compareTo`, `toUpperCase`, `toCharArray`, etc. | Intermediate |
