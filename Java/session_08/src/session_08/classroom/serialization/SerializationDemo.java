@@ -1,12 +1,12 @@
-package session_08.classroom.seralization;
+package session_08.classroom.serialization;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class Test {
+public class SerializationDemo {
 	public static void main(String[] args) throws IOException {
-		SeralizationDemo emp = new SeralizationDemo("Swayam", 24);
+		SerializationInterface emp = new SerializationInterface("Swayam", 24);
 
 		//		Try-with-resources
 		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("employee.ser"))) {
