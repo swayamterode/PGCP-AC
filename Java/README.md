@@ -41,6 +41,9 @@ A collection of Java programs organized by session, covering core Java fundament
     - [NIO](#nio)
     - [Regex](#regex)
     - [RandomAccessFile](#randomaccessfile)
+  - [Session 12 — Streams API \& Functional Data Processing](#session-12--streams-api--functional-data-processing)
+    - [Core Classes](#core-classes)
+    - [Stream Operations](#stream-operations)
 
 ---
 
@@ -323,3 +326,25 @@ A collection of Java programs organized by session, covering core Java fundament
 | #   | File                                                  | Description                                                                    | Level    |
 | --- | ----------------------------------------------------- | ------------------------------------------------------------------------------ | -------- |
 | 1   | [Demo.java](session_11/src/com/example/raf/Demo.java) | `RandomAccessFile` — `seek`, `getFilePointer`, and arbitrary read/write access | Advanced |
+
+---
+
+## Session 12 — Streams API & Functional Data Processing
+
+**Path:** `session_12/src/session_12/com/example/javaapi/`
+
+> Covers Java Streams API for functional-style operations on collections, including filtering, mapping, aggregation, and terminal operations with practical `Employee` data examples.
+
+### Core Classes
+
+| #   | File                                                                                                              | Description                                                           | Level    |
+| --- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | -------- |
+| 1   | [Employee.java](session_12/src/session_12/com/example/javaapi/Employee.java)                                     | POJO with `empId`, `empName`, and `empSal` fields; getters, setters, and `toString` | Beginner |
+
+### Stream Operations
+
+| #   | File                                                                                                              | Description                                                                                        | Level        |
+| --- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------ |
+| 1   | [BasicOperations.java](session_12/src/session_12/com/example/javaapi/BasicOperations.java)                       | Stream creation, `IntStream.of()`, `rangeClosed()`, `range()`; chained `filter→map→reduce`         | Elementary   |
+| 2   | [SalaryGreaterThan.java](session_12/src/session_12/com/example/javaapi/SalaryGreaterThan.java)                    | `filter()` + `collect()` with `Collectors.toMap()`; salary filtering using method references       | Intermediate |
+| 3   | [Test.java](session_12/src/session_12/com/example/javaapi/Test.java)                                             | Comprehensive demo: `count()`, `filter()`, `map()`, `sorted()`, `min()`, `reduce()`, `Optional<T>` | Intermediate |
