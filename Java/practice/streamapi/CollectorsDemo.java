@@ -1,6 +1,7 @@
 package streamapi;
 
 import java.util.*;
+import java.util.stream.*;
 
 public class CollectorsDemo {
 	public static void main(String[] args) {
@@ -18,8 +19,8 @@ public class CollectorsDemo {
 		TreeSet<String> t1 = names.stream().collect(Collectors.toCollection(() -> new TreeSet<String>()));
 		System.out.println(t1);
 //		4. joining
-		String concatedNames = names.stream().map(String::toUpperCase).collect(Collectors.joining(" ,"));
-		System.err.println("Joing with delimiter: " + concatedNames);
+		String concatenatedNames = names.stream().map(String::toUpperCase).collect(Collectors.joining(" ,"));
+		System.out.println("Joining with delimiter: " + concatenatedNames);
 //		5. Summarizing Data -> generates stats summary(count, sum, min,average, max)
 		List<Integer> numbers = Arrays.asList(1, 44, 146, 6);
 		IntSummaryStatistics collect1 = numbers.stream().collect(Collectors.summarizingInt(x -> x));
