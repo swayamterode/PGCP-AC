@@ -5,6 +5,18 @@ chaining in Java.
 
 ---
 
+## Table of Contents
+
+| # | Scenario | Difficulty |
+| --- | --- | --- |
+| [1](#question-1--easy) | Bank — overdrawn accounts | Easy |
+| [2](#question-2--easy) | Hospital — admitted elderly patients | Easy |
+| [3](#question-3--easy) | HR — active Finance employees | Easy |
+| [4](#question-4--medium) | University — Dean's List eligibility | Medium |
+| [5](#question-5--medium) | E-commerce — orders needing attention | Medium |
+
+---
+
 ## Question 1 — Easy
 
 **Scenario:** A bank maintains a list of customer accounts.  
