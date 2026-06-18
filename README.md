@@ -19,6 +19,11 @@
 | [Assignments](CPP/Assignments/) | Inheritance, polymorphism |
 | [File Handling](CPP/file_handeling/) | File I/O streams |
 
+### C# .NET
+| Topic | Location |
+|-------|----------|
+| [Day 1 Console Apps](C%23%20.Net/) | Welcome message, sum/average of marks, swap, ASCII, Net Salary |
+
 ### Database Technologies
 | Topic | Location |
 |-------|----------|
