@@ -1,0 +1,14 @@
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.GeneratedMSBuildEditorConfig.editorconfig
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.AssemblyInfoInputs.cache
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.AssemblyInfo.cs
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.csproj.CoreCompileInputs.cache
+/Users/swym/Developer/C#/asciiValue/bin/Debug/net10.0/asciiValue
+/Users/swym/Developer/C#/asciiValue/bin/Debug/net10.0/asciiValue.deps.json
+/Users/swym/Developer/C#/asciiValue/bin/Debug/net10.0/asciiValue.runtimeconfig.json
+/Users/swym/Developer/C#/asciiValue/bin/Debug/net10.0/asciiValue.dll
+/Users/swym/Developer/C#/asciiValue/bin/Debug/net10.0/asciiValue.pdb
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.dll
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/refint/asciiValue.dll
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.pdb
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/asciiValue.genruntimeconfig.cache
+/Users/swym/Developer/C#/asciiValue/obj/Debug/net10.0/ref/asciiValue.dll

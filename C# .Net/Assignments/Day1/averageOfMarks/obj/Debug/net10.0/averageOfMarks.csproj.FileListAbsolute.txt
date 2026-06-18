@@ -1,0 +1,14 @@
+/Users/swym/Developer/C#/averageOfMarks/bin/Debug/net10.0/averageOfMarks
+/Users/swym/Developer/C#/averageOfMarks/bin/Debug/net10.0/averageOfMarks.deps.json
+/Users/swym/Developer/C#/averageOfMarks/bin/Debug/net10.0/averageOfMarks.runtimeconfig.json
+/Users/swym/Developer/C#/averageOfMarks/bin/Debug/net10.0/averageOfMarks.dll
+/Users/swym/Developer/C#/averageOfMarks/bin/Debug/net10.0/averageOfMarks.pdb
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.GeneratedMSBuildEditorConfig.editorconfig
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.AssemblyInfoInputs.cache
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.AssemblyInfo.cs
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.csproj.CoreCompileInputs.cache
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.dll
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/refint/averageOfMarks.dll
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.pdb
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/averageOfMarks.genruntimeconfig.cache
+/Users/swym/Developer/C#/averageOfMarks/obj/Debug/net10.0/ref/averageOfMarks.dll

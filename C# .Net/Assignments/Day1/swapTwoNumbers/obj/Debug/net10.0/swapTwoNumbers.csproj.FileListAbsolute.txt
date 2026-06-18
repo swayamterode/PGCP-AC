@@ -1,0 +1,14 @@
+/Users/swym/Developer/C#/swapTwoNumbers/bin/Debug/net10.0/swapTwoNumbers
+/Users/swym/Developer/C#/swapTwoNumbers/bin/Debug/net10.0/swapTwoNumbers.deps.json
+/Users/swym/Developer/C#/swapTwoNumbers/bin/Debug/net10.0/swapTwoNumbers.runtimeconfig.json
+/Users/swym/Developer/C#/swapTwoNumbers/bin/Debug/net10.0/swapTwoNumbers.dll
+/Users/swym/Developer/C#/swapTwoNumbers/bin/Debug/net10.0/swapTwoNumbers.pdb
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.AssemblyInfoInputs.cache
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.AssemblyInfo.cs
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.csproj.CoreCompileInputs.cache
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.dll
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/refint/swapTwoNumbers.dll
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.pdb
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/swapTwoNumbers.genruntimeconfig.cache
+/Users/swym/Developer/C#/swapTwoNumbers/obj/Debug/net10.0/ref/swapTwoNumbers.dll
